@@ -1,6 +1,17 @@
-let uno = 1;
-let dos = 2;
+let oneArray = [1, 4, 23, -4, "one", 6, 0, 1.1, 3.1415];
 
-let tres = uno + dos;
+function multiplyAndFilter(entry) {
+  
+  let multiply = [];
 
-console.log(tres);
+  for (let i in entry) {
+    multiply[i] = entry[i] * 4;
+  }
+
+  let result = multiply.filter(filtro => filtro >= 8);
+
+  return result;
+
+}
+
+console.log(multiplyAndFilter(oneArray));
