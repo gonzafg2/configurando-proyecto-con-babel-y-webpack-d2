@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "desafio2",
   "version": "1.0.0",
-  "description": "Templates para proyectos sin VueJS",
+  "description": "Desafío 2",
   "main": "./src/assets/js/main.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
