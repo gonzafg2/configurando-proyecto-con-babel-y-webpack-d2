@@ -7,8 +7,7 @@ module.exports = {
   mode: "production",
 
   entry: {
-    index: "./src/assets/js/main.js",
-    check: "./src/assets/js/check.js"
+    index: "./ejemplo/js/main.js",
   },
 
   output: {
@@ -18,7 +17,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./ejemplo/index.html",
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -36,15 +35,15 @@ module.exports = {
   module: {
     rules: [
       {
-      test: /\.m?js$/,
-      exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-object-rest-spread']
-          }
-        }
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread"],
+          },
+        },
       },
       {
         test: /\.css$/,
@@ -63,6 +62,17 @@ module.exports = {
           "css-loader",
           // Compiles Sass to CSS
           "sass-loader",
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/img/[name].[ext]",
+            },
+          },
         ],
       },
     ],

@@ -2,7 +2,7 @@
   "name": "desafio2",
   "version": "1.0.0",
   "description": "Desafío 2",
-  "main": "./src/assets/js/main.js",
+  "main": "./js/main.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
     "build": "webpack"
