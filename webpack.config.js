@@ -8,6 +8,11 @@ module.exports = {
 
   entry: {
     index: "./ejemplo/js/main.js",
+    desafio2: [
+      "./ejemplo/js/one.js",
+      "./ejemplo/js/two.js",
+      "./ejemplo/js/three.js"
+    ]
   },
 
   output: {
@@ -48,10 +53,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
