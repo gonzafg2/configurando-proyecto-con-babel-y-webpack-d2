@@ -10,5 +10,6 @@ const objectThree = {
   "three": convertJSON(people),
 }
 
-console.log(objectThree);
-
+console.log(objectThree.status);
+console.log(objectThree.one);
+console.log(objectThree.three);
