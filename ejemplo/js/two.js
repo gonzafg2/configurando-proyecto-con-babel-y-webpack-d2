@@ -1,3 +1,5 @@
+export { people, convertJSON };
+
 const people = {
   name: "Gonzalo",
   last_name: "Fleming",
@@ -5,13 +7,13 @@ const people = {
   single: false
 }
 
-try {
-  const convertJSON = i => { 
-    let objectJSON = JSON.stringify(i);
-    return objectJSON;
+  const convertJSON = i => {
+      
+    try {
+      let objectJSON = JSON.stringify(i);
+      return objectJSON;
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
-  console.log(convertJSON(people));
-  
-} catch (error) {
-  console.log(error.message);
-}
